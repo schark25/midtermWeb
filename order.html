@@ -1,0 +1,200 @@
+<!Doctype html>
+<html>
+<head>
+  <style>
+
+    body {
+      background-color: #F5DEB3; 
+    }
+    #pageTitle {
+      background-color: #8B0000;
+      color: #b5a484;
+      padding: 40px;
+      text-align: center;
+      font-family: georgia; 
+      font-size: 43px; 
+    }
+  
+    .btn-group button {
+      background-color: #b5a484;
+      border-color: #8B0000; 
+      border-width: thin;
+      margin: auto;
+      color: #8B0000;
+      padding: 10px 24px;
+      cursor: pointer;
+      width: 90%; 
+      display: block; 
+    }
+
+    .btn-group button:not(:last-child) {
+      border-bottom: none;
+    }
+
+    .btn-group button:hover span {
+      display:none
+    }
+
+    .btn-group button:hover:before {
+      content:"Add to order";
+    }
+
+    .btn-group button:hover {
+      background-color: #8B0000;
+      color: #b5a484;
+    }
+
+    table, td {
+      width: 60%; 
+      border: 1px solid #8B0000;
+      color:  #8B0000;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+<h1 id="pageTitle">Order Online</h1>
+
+<div class="btn-group">
+  <button onclick="myFunction(0)"><span>Meatballs</span></button>
+  <button onclick="myFunction(1)"><span>Calamari</span></button>
+  <button onclick="myFunction(2)"><span>Grilled Octopus</span></button>
+</div>
+
+<br> <br> 
+
+<table id="orderSummary">
+  <tr>
+    <td contenteditable='true'>Quantity</td>
+    <td>Item</td>
+    <td contenteditable='true'>Price</td>
+  </tr>
+</table>
+
+<br>
+
+<p> 
+	<input type="radio"  name='p_or_d' value = 'delivery' checked="checked" />
+	Delivery
+	<input type="radio"  name="p_or_d" value = "pickup" />Pickup  
+</p>
+
+<div class="wrapper">
+    <div class="container">
+        <form action="">
+            <h1>
+                <i class="fas fa-shipping-fast"></i>
+                Personal Information
+            </h1>
+            <div class="name">
+                <div>
+                    <label for="f-name">First Name</label>
+                    <input type="text" name="f-name">
+                </div>
+                <div>
+                    <label for="l-name">Last Name</label>
+                    <input type="text" name="l-name">
+                </div>
+            </div>
+            <div class="phone">
+                <label for="name">Phone Number</label>
+                <input type="text" name="phone">
+            </div>
+            <div class="street">
+                <label for="name">Street</label>
+                <input type="text" name="street">
+            </div>
+            <div class="address-info">
+                <div>
+                    <label for="city">City</label>
+                    <input type="text" name="city">
+                </div>
+                <div>
+                    <label for="state">State</label>
+                    <input type="text" name="state">
+                </div>
+                <div>
+                    <label for="zip">Zip</label>
+                    <input type="text" name="zip">
+                </div>
+            </div>
+            <h1>
+                <i class="far fa-credit-card"></i> Payment Information
+            </h1>
+            <div class="cc-num">
+                <label for="card-num">Credit Card No.</label>
+                <input type="text" name="card-num">
+            </div>
+            <div class="cc-info">
+                <div>
+                    <label for="card-num">Exp</label>
+                    <input type="text" name="expire">
+                </div>
+                <div>
+                    <label for="card-num">CCV</label>
+                    <input type="text" name="security">
+                </div>
+            </div>
+            <div class="btns">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+
+  // Menu Item 
+  function MenuItem(name, desc, price) {
+	  this.name = name; 
+    this.desc = desc; 
+    this.price = price; 
+  }
+
+  // Array of MenuItems 
+  menuItems = new Array(
+	  new MenuItem("Meatballs", "Homemade meatballs topped with Parmigiano Reggiano, tomato sauce, and basil", 18),
+    new MenuItem("Calamari", "Fried calamari served with homemade tomato dip", 18),
+    new MenuItem("Grilled Octopus", "Grilled octopus, braised tomatoes, and olives", 25)
+  )
+
+  // Array of item quantities 
+  itemQuantities = new Array(0, 0, 0)
+
+  // Array of item row numbers
+  rowNumbers = new Array("", "", "")
+
+  // Update to order summary
+  function myFunction(i) {
+    var table = document.getElementById("orderSummary");
+    var row, cell1, cell2, cell3; 
+
+    if (itemQuantities[i] == 0) {
+      row = table.insertRow(-1); 
+      cell1 = row.insertCell(0);
+      cell2 = row.insertCell(1);
+      cell3 = row.insertCell(2);
+      rowNumbers[i] = table.rows.length - 1; 
+    } else {
+      var rowNum = rowNumbers[i]; 
+      row = table.rows[rowNum];
+      cell1 = row.cells[0];
+      cell2 = row.cells[1];
+      cell3 = row.cells[2];
+    }
+
+    itemQuantities[i]++;
+    cell1.innerHTML = itemQuantities[i];
+    cell2.innerHTML = menuItems[i].name;
+    cell3.innerHTML = menuItems[i].price * itemQuantities[i];
+    }
+
+
+</script>
+
+
+
+</body>
+</html>
