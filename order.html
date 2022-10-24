@@ -1,13 +1,87 @@
 <!Doctype html>
 <html>
 <head>
-	<link rel="stylesheet" href="headerFooter.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+    	* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		footer {
+			display: block;
+			margin: auto;
+			background-color: #8B0000;
+			bottom: 0;
+			width: 100%;
+		}
+		ol {
+			list-style: none;
+		}
+		.logo, #submitButton {
+			cursor: pointer;
+		}
+		.navBar {
+				background-color: #8B0000;
+				overflow: hidden;
+				width: 100%;
+		}
+		.navBar ol li {
+				list-style: none;
+   				position: relative;
+		}
+		.navBar a {
+			float: left;
+			display: block;
+  			color: #f2f2f2;
+  			text-align: center;
+  			padding: 14px 16px;
+  			text-decoration: none;
+  			font-size: 17px;
+		}.navBar a.active {
+			background-color: #FFFFFF;
+			color: #8B0000;
+		}
+		.navBar a:hover {
+			background-color: #FFFFFF;
+			color: #8B0000;
+			transition: .3s ease all
+		}
+		.navBar .icon {
+			display: none;
+		}
+    ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
 
     body {
       background-color: #F5DEB3; 
     }
+
+    #n0, #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9, #n10, #n11, 
+    #n12, #n13, #n14, #n15, #n16, #n17, #n18, #n19, #n20, #n21, 
+    #n22, #n23, #n24, #n25 {
+      color: #8B0000;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    #d0, #d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9, #d10, #d11, 
+    #d12, #d13, #d14, #d15, #d16, #d17, #d18, #d19, #d20, #d21, 
+    #d22, #d23, #d24, #d25 {
+      color: #8B0000;
+      font-size: 16px; 
+      font-style: italic; 
+      font-weight: 300; 
+    }
+
+    #p0, #p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11, 
+    #p12, #p13, #p14, #p15, #p16, #p17, #p18, #p19, #p20, #p21, 
+    #p22, #p23, #p24, #p25 {
+      color: #8B0000;
+      font-size: 14px; 
+      font-weight: 150;
+    }
+
     #pageTitle {
       background-color: #8B0000;
       color: #b5a484;
@@ -20,9 +94,11 @@
     .btn-group button {
       background-color: #b5a484;
       border-color: #8B0000; 
+      font-family: georgia; 
+      font-size: 19px; 
       border-width: thin;
       margin: auto;
-      color: #8B0000;
+      text-align: left;
       padding: 10px 24px;
       cursor: pointer;
       width: 90%; 
@@ -47,38 +123,151 @@
     }
 
     table, td {
-      width: 60%; 
-      border: 1px solid #8B0000;
-      color:  #8B0000;
+      width: 50%; 
+      border: 1px solid #b5a484;
+      background-color:  #8B0000;
+      color: #F5DEB3;
       margin: auto;
+      font-family: georgia; 
+      font-size: 19px; 
+    }
+
+    #orderType {
+      color: #8B0000;
+      margin-left: 15px;
+    }
+
+    #infoTitle {
+      color: #8B0000;
+    }
+
+    .wrapper {
+      color: #8B0000;
+    }
+
+    .row {
+      display: -ms-flexbox; 
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+
+
+    .col-50 {
+      -ms-flex: 50%; /* IE10 */
+      flex: 50%;
+    }
+
+    .col-75 {
+      -ms-flex: 75%; /* IE10 */
+      flex: 75%;
+    }
+
+    .col-50,
+    .col-75 {
+      padding: 0 16px;
+    }
+
+    .container {
+      background-color: #F5DEB3;
+      color: #8B0000;
+      padding: 5px 20px 15px 20px;
+      border: 1px solid #8B0000;
+      border-radius: 3px;
+    }
+
+    input[type=text] {
+      width: 70%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    label {
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .btn {
+      background-color: #8B0000;
+      color: #b5a484;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      width: 100%;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .btn:hover {
+      background-color: #b5a484;
+      color: #8B0000;
+    }
+
+    @media (max-width: 800px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+      .col-25 {
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
 <body>
-<header>
-	<div class = "navBar" id="navBar">
-		<ol>
-			<li><a href="https://schark25.github.io/midtermWeb/">Home</a></li>
-			<li><a href="https://schark25.github.io/midtermWeb/menu.html">Menu</a></li>
-			<li><a href="https://schark25.github.io/midtermWeb/reservation.html">Reservation</a></li>
-			<li><a href="https://schark25.github.io/midtermWeb/order.html"  class = "active">Order Online</a></li>
-			<li><a href="https://schark25.github.io/midtermWeb/contactUS.html">Contact Us</a></li>
-			<li><a href="https://schark25.github.io/midtermWeb/FAQ.html">FAQ</a></li>
-			<li><a href="https://schark25.github.io/midtermWeb/locations.html">Locations and Hours</a></li>
-			<li><a href="#placeholder" class="icon" onclick="openMenu()"><i class="fa fa-bars"></i></a></li>
-			</ol>
-	</div>
+  <header>
+    <div class = "navBar" id="navBar">
+      <ol>
+        <li><a href="#home" class = "active">Home</a></li>
+        <li><a href="#home">Menu</a></li>
+        <li><a href="#home">Reservation</a></li>
+        <li><a href="#home">Order Online</a></li>
+        <li><a href="#home">Contact Us</a></li>
+        <li><a href="#home">FAQ</a></li>
+        <li><a href="#home">Locations and Hours</a></li>
+        <li><a href="#placeholder" class="icon" onclick="openMenu()"><i class="fa fa-bars"></i></a></li>
+        </ol>
+    </div>
 	</header>
 <h1 id="pageTitle">Order Online</h1>
 
+
+<!-- Menu ordering buttons -->
 <div class="btn-group">
-  <button onclick="myFunction(0)"><span>Meatballs</span></button>
-  <button onclick="myFunction(1)"><span>Calamari</span></button>
-  <button onclick="myFunction(2)"><span>Grilled Octopus</span></button>
+  <button onclick="myFunction(0)"><span id=n0></span><span id=d0><br></span><span id=p0><br></span></button>
+  <button onclick="myFunction(1)"><span id=n1></span><span id=d1><br></span><span id=p1><br></span></button>
+  <button onclick="myFunction(2)"><span id=n2></span><span id=d2><br></span><span id=p2><br></span></button>
+  <button onclick="myFunction(3)"><span id=n3></span><span id=d3><br></span><span id=p3><br></span></button>
+  <button onclick="myFunction(4)"><span id=n4></span><span id=d4><br></span><span id=p4><br></span></button>
+  <button onclick="myFunction(5)"><span id=n5></span><span id=d5><br></span><span id=p5><br></span></button>
+  <button onclick="myFunction(6)"><span id=n6></span><span id=d6><br></span><span id=p6><br></span></button>
+  <button onclick="myFunction(7)"><span id=n7></span><span id=d7><br></span><span id=p7><br></span></button>
+  <button onclick="myFunction(8)"><span id=n8></span><span id=d8><br></span><span id=p8><br></span></button>
+  <button onclick="myFunction(9)"><span id=n9></span><span id=d9><br></span><span id=p9><br></span></button>
+  <button onclick="myFunction(10)"><span id=n10></span><span id=d10><br></span><span id=p10><br></span></button>
+  <button onclick="myFunction(11)"><span id=n11></span><span id=d11><br></span><span id=p11><br></span></button>
+  <button onclick="myFunction(12)"><span id=n12></span><span id=d12><br></span><span id=p12><br></span></button>
+  <button onclick="myFunction(13)"><span id=n13></span><span id=d13><br></span><span id=p13><br></span></button>
+  <button onclick="myFunction(14)"><span id=n14></span><span id=d14><br></span><span id=p14><br></span></button>
+  <button onclick="myFunction(15)"><span id=n15></span><span id=d15><br></span><span id=p15><br></span></button>
+  <button onclick="myFunction(16)"><span id=n16></span><span id=d16><br></span><span id=p16><br></span></button>
+  <button onclick="myFunction(17)"><span id=n17></span><span id=d17><br></span><span id=p17><br></span></button>
+  <button onclick="myFunction(18)"><span id=n18></span><span id=d18><br></span><span id=p18><br></span></button>
+  <button onclick="myFunction(19)"><span id=n19></span><span id=d19><br></span><span id=p19><br></span></button>
+  <button onclick="myFunction(20)"><span id=n20></span><span id=d20><br></span><span id=p20><br></span></button>
+  <button onclick="myFunction(21)"><span id=n21></span><span id=d21><br></span><span id=p21><br></span></button>
+  <button onclick="myFunction(22)"><span id=n22></span><span id=d22><br></span><span id=p22><br></span></button>
+  <button onclick="myFunction(23)"><span id=n23></span><span id=d23><br></span><span id=p23><br></span></button>
+  <button onclick="myFunction(24)"><span id=n24></span><span id=d24><br></span><span id=p24><br></span></button>
+  <button onclick="myFunction(25)"><span id=n25></span><span id=d25><br></span><span id=p25><br></span></button>
 </div>
 
-<br> <br> 
+<br> <br> <br> <br>
 
+<!-- Ordered items -->
 <table id="orderSummary">
   <tr>
     <td contenteditable='true'>Quantity</td>
@@ -89,79 +278,64 @@
 
 <br>
 
-<p> 
-	<input type="radio"  name='p_or_d' value = 'delivery' checked="checked" />
-	Delivery
-	<input type="radio"  name="p_or_d" value = "pickup" />Pickup  
+<!-- Select type of order -->
+<p id="orderType"> 
+	<input type="radio"  name='p_or_d' value = 'delivery' checked="checked" onchange="delivery()"/>Delivery
+	<input type="radio"  name="p_or_d" value = "pickup" onchange="notDelivery()"/>Pickup  
 </p>
 
-<div class="wrapper">
+
+<!-- Personal info and payment form -->
+<div class="row">
+  <div class="col-75">
     <div class="container">
-        <form action="">
-            <h1>
-                <i class="fas fa-shipping-fast"></i>
-                Personal Information
-            </h1>
-            <div class="name">
-                <div>
-                    <label for="f-name">First Name</label>
-                    <input type="text" name="f-name">
-                </div>
-                <div>
-                    <label for="l-name">Last Name</label>
-                    <input type="text" name="l-name">
-                </div>
-            </div>
-            <div class="phone">
-                <label for="name">Phone Number</label>
-                <input type="text" name="phone">
-            </div>
-            <div class="street">
-                <label for="name">Street</label>
-                <input type="text" name="street">
-            </div>
-            <div class="address-info">
-                <div>
-                    <label for="city">City</label>
-                    <input type="text" name="city">
-                </div>
-                <div>
-                    <label for="state">State</label>
-                    <input type="text" name="state">
-                </div>
-                <div>
-                    <label for="zip">Zip</label>
-                    <input type="text" name="zip">
-                </div>
-            </div>
-            <h1>
-                <i class="far fa-credit-card"></i> Payment Information
-            </h1>
-            <div class="cc-num">
-                <label for="card-num">Credit Card No.</label>
-                <input type="text" name="card-num">
-            </div>
-            <div class="cc-info">
-                <div>
-                    <label for="card-num">Exp</label>
-                    <input type="text" name="expire">
-                </div>
-                <div>
-                    <label for="card-num">CCV</label>
-                    <input type="text" name="security">
-                </div>
-            </div>
-            <div class="btns">
-                <button>Submit</button>
-            </div>
-        </form>
+      <form onsubmit="return submitForm()">
+          <div class="col-50">
+            <h3>Personal Information</h3>
+            <!-- Name and email -->
+            <label id="fname">Full Name:</label> 
+            <input type="text" placeholder="John Doe" name='fname' id=fnameTxt /></p>
+            <label id="email">Email:</label> 
+            <input type="text" placeholder="john@example.com" name='email' id=emailTxt /></p>
+
+            
+            <!-- Delivery address -->
+            <label id="street">Street:</label> 
+            <input type="text" placeholder="123 Main St" name='street' id=streetTxt /></p>
+
+            <label id="city">City:</label> 
+            <input type="text" placeholder="Medford" name='city' id=cityTxt /></p>
+
+            <label id="state">State:</label> 
+            <input type="text" placeholder="MA" name='state' id=stateTxt /></p>
+
+            <label id="zip">Zip:</label> 
+            <input type="text" placeholder="02155" name='zip' id=zipTxt /></p>  
+       
+
+            <!-- Payment information -->
+            <h3>Payment</h3>
+            <label id="cardName">Name on card:</label> 
+            <input type="text" placeholder="John Doe" name='cardName' id=cardNameTxt /></p> 
+
+            <label id="ccNum">Card number:</label> 
+            <input type="text" placeholder="1111-2222-3333-4444" name='ccNum' id=ccNumTxt /></p> 
+
+            <label id="expMonth">Exp month:</label> 
+            <input type="text" placeholder="12" name='expMonth' id=expMonthTxt /></p> 
+
+            <label id="expYear">Exp year:</label> 
+            <input type="text" placeholder="24" name='expYear' id=expYearTxt /></p> 
+          </div>
+
+        
+        <br>
+        <input type="submit" value="Submit Order" class="btn">
+      </form>
     </div>
+  </div>
 </div>
-	<footer>
-		<div><a href="https://schark25.github.io/midtermWeb/">
-		<img src = "logo_transparent.png" width="15%" alt = "Logo" class = "logo">
-		</a></div>
-	</footer>
+
 
 <script>
 
@@ -176,14 +350,54 @@
   menuItems = new Array(
 	  new MenuItem("Meatballs", "Homemade meatballs topped with Parmigiano Reggiano, tomato sauce, and basil", 18),
     new MenuItem("Calamari", "Fried calamari served with homemade tomato dip", 18),
-    new MenuItem("Grilled Octopus", "Grilled octopus, braised tomatoes, and olives", 25)
+    new MenuItem("Grilled Octopus", "Grilled octopus, braised tomatoes, and olives", 25),
+    new MenuItem("Beef Carpaccio", "Thinly sliced filet mignon, arugula, Parmigiano Reggiano flakes, and black truffle sauce", 25),
+    new MenuItem("Caesar", "Classic Caesar with Parmigiano Reggiano", 17),
+    new MenuItem("Caprese", "Buffalo mozzarella, roma tomatoes, fresh basil, balsamic vinegar, and extra virgin olive oil", 25),
+    new MenuItem("Goat Cheese & Spinach Salad", "Pine nut, goat cheese, spinach, and balsamic vinaigrette", 20),
+    new MenuItem("Marinara Pizza", "Tomato, oregano, and garlic", 17),
+    new MenuItem("Margherita Pizza", "Tomato, mozzarella, and basil", 19),
+    new MenuItem("Napoletana Pizza", "Tomato, mozzarella, anchovies, capers, and basil", 20),
+    new MenuItem("Pepperoni Pizza", "Tomato, mozzarella, and pepperoni", 20),
+    new MenuItem("Vegetable Pizza", "Tomato, mushrooms, onions, garlic, spinach, and zucchini", 17),
+    new MenuItem("Sausage Pizza", "Tomato, mozzarella, mushrooms, and spicy sausage", 20), 
+    new MenuItem("Penne alla vodka", "Homemade tomato sauce, red pepper flakes, and a splash of vodka and cream", 21),
+    new MenuItem("Cacio e Pepe", "Pecorino Romano, crushed black pepper, and extra virgin olive oil", 22),
+    new MenuItem("Spaghetti Carbonara", "Bacon, Parmigiano Reggiano, Pecorino, eggs, and black pepper", 23),
+    new MenuItem("Orecchiette", "Spicy sausage and broccoli rabe", 22),
+    new MenuItem("Rigatoni alla Bolognese", "With homemade meat sauce", 24),
+    new MenuItem("Ravioli al Tartufo Nero", "Black truffle ravioli and butter", 29), 
+    new MenuItem("Eggplant Parmigiana", "Eggplant, mozzarella, tomato sauce, fresh basil and Parmigiano Reggiano", 22),
+    new MenuItem("Paolo's Burger", "Wagyu beef, fontina cheese, caramelized onions and French fries", 21),
+    new MenuItem("Chicken Paillard", "Free range chicken breast with arugula", 23),
+    new MenuItem("Pollo Milanese", "Free range chicken breast, breaded and sautéed with arugula tomatoes and basil", 22),
+    new MenuItem("Steak & Fries", "10oz. Angus Steak, grilled, served with French fries", 34),
+    new MenuItem("Grilled Salmon", "Served with cherry tomatoes, avocado, and basil", 30),
+    new MenuItem("Branzino", "Mediterranean sea bass, served with cherry tomatoes", 32)
   )
 
+  // Set buttons
+
+  for (i = 0; i < 26; i++) {
+    const nameBtn = document.getElementById("n" + i.toString());
+    const descBtn = document.getElementById("d" + i.toString());
+    const priceBtn = document.getElementById("p" + i.toString());
+    var name = menuItems[i].name; 
+    var desc = menuItems[i].desc;
+    var price = menuItems[i].price;  
+    nameBtn.textContent = name + "  ";
+    descBtn.textContent = desc + "  "; 
+    priceBtn.textContent = " [" + price + "]"; 
+  }
+  
+
+
+
   // Array of item quantities 
-  itemQuantities = new Array(0, 0, 0)
+  itemQuantities = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
   // Array of item row numbers
-  rowNumbers = new Array("", "", "")
+  rowNumbers = new Array("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
 
   // Update to order summary
   function myFunction(i) {
@@ -208,20 +422,41 @@
     cell1.innerHTML = itemQuantities[i];
     cell2.innerHTML = menuItems[i].name;
     cell3.innerHTML = menuItems[i].price * itemQuantities[i];
-    }
+  }
 
 
+  // Show street, city, state, and zip fields
+  function delivery(){
+    document.getElementById("street").style.display='block'; 
+	  document.getElementById("streetTxt").style.display='block'; 
+    document.getElementById("city").style.display='block'; 
+	  document.getElementById("cityTxt").style.display='block'; 
+    document.getElementById("state").style.display='block'; 
+	  document.getElementById("stateTxt").style.display='block'; 
+    document.getElementById("zip").style.display='block'; 
+	  document.getElementById("zipTxt").style.display='block'; 
+  }
+
+  // Hide street, city, state, and zip fields
+  function notDelivery(){
+    document.getElementById("street").style.display='none'; 
+	  document.getElementById("streetTxt").style.display='none'; 
+    document.getElementById("city").style.display='none'; 
+	  document.getElementById("cityTxt").style.display='none'; 
+    document.getElementById("state").style.display='none'; 
+	  document.getElementById("stateTxt").style.display='none'; 
+    document.getElementById("zip").style.display='none'; 
+	  document.getElementById("zipTxt").style.display='none'; 
+  }
+
+
+  function submitForm(){
+    var currentTime = new Date();
+    var readyTime = new Date(currentTime.getTime() + 30*60000);
+    alert("Your order has been placed! Your order will be ready at " + readyTime);
+  }
 </script>
- <script>
-		function openMenu() {
-		var theNavBar = document.getElementById("navBar");
-		if (theNavBar.className == "navBar") {
-			theNavBar.className += " responsive";
-		} else {
-			theNavBar.className = "navBar";
-		}
-	}
-	    </script>
+
 
 
 </body>
