@@ -2,7 +2,10 @@
 <html>
 <head>
   <style>
-    	* {
+    body{
+      background-color: #F5DEB3;
+    }
+    * {
 			box-sizing: border-box;
 			padding: 0;
 			margin: 0;
@@ -13,7 +16,6 @@
 			background-color: #8B0000;
 			bottom: 0;
 			width: 100%;
-  			text-align: center;
 		}
 		ol {
 			list-style: none;
@@ -93,7 +95,7 @@
     }
   
     .btn-group button {
-      background-color: #b5a484;
+      background-color: #F5DEB3;
       border-color: #8B0000; 
       font-family: georgia; 
       font-size: 19px; 
@@ -123,11 +125,13 @@
       color: #b5a484;
     }
 
+  
+
     table, td {
       width: 50%; 
       border: 1px solid #b5a484;
-      background-color:  #8B0000;
-      color: #F5DEB3;
+      background-color:  #F5DEB3;
+      color: #8B0000;
       margin: auto;
       font-family: georgia; 
       font-size: 19px; 
@@ -216,54 +220,58 @@
         margin-bottom: 20px;
       }
     }
+
+    #subTxt, #taxTxt, #totalTxt {
+      text-align: right; 
+    }
   </style>
 </head>
 <body>
   <header>
     <div class = "navBar" id="navBar">
       <ol>
-        <li><a href="https://schark25.github.io/midtermWeb/">Home</a></li>
-        <li><a href="https://schark25.github.io/midtermWeb/menu.html">Menu</a></li>
-        <li><a href="https://schark25.github.io/midtermWeb/reservation.html">Reservation</a></li>
-        <li><a href="#home" class = "active">Order Online</a></li>
-        <li><a href="https://schark25.github.io/midtermWeb/contactUS.html">Contact Us</a></li>
-        <li><a href="https://schark25.github.io/midtermWeb/FAQ.html">FAQ</a></li>
-        <li><a href="https://schark25.github.io/midtermWeb/locations.html">Locations and Hours</a></li>
+        <li><a href="#home" class = "active">Home</a></li>
+        <li><a href="#home">Menu</a></li>
+        <li><a href="#home">Reservation</a></li>
+        <li><a href="#home">Order Online</a></li>
+        <li><a href="#home">Contact Us</a></li>
+        <li><a href="#home">FAQ</a></li>
+        <li><a href="#home">Locations and Hours</a></li>
         <li><a href="#placeholder" class="icon" onclick="openMenu()"><i class="fa fa-bars"></i></a></li>
         </ol>
     </div>
 	</header>
-<h1 id="pageTitle">Order Online</h1>
+<h1 id="pageTitle">Order Online</h1><br>
 
 
 <!-- Menu ordering buttons -->
 <div class="btn-group">
-  <button onclick="myFunction(0)"><span id="n0"></span><span id="d0"><br></span><span id="p0"><br></span></button>
-  <button onclick="myFunction(1)"><span id="n1"></span><span id="d1"><br></span><span id="p1"><br></span></button>
-  <button onclick="myFunction(2)"><span id="n2"></span><span id="d2"><br></span><span id="p2"><br></span></button>
-  <button onclick="myFunction(3)"><span id="n3"></span><span id="d3"><br></span><span id="p3"><br></span></button>
-  <button onclick="myFunction(4)"><span id="n4"></span><span id="d4"><br></span><span id="p4"><br></span></button>
-  <button onclick="myFunction(5)"><span id="n5"></span><span id="d5"><br></span><span id="p5"><br></span></button>
-  <button onclick="myFunction(6)"><span id="n6"></span><span id="d6"><br></span><span id="p6"><br></span></button>
-  <button onclick="myFunction(7)"><span id="n7"></span><span id="d7"><br></span><span id="p7"><br></span></button>
-  <button onclick="myFunction(8)"><span id="n8"></span><span id="d8"><br></span><span id="p8"><br></span></button>
-  <button onclick="myFunction(9)"><span id="n9"></span><span id="d9"><br></span><span id="p9"><br></span></button>
-  <button onclick="myFunction(10)"><span id="n10"></span><span id="d10"><br></span><span id="p10"><br></span></button>
-  <button onclick="myFunction(11)"><span id="n11"></span><span id="d11"><br></span><span id="p11"><br></span></button>
-  <button onclick="myFunction(12)"><span id="n12"></span><span id="d12"><br></span><span id="p12"><br></span></button>
-  <button onclick="myFunction(13)"><span id="n13"></span><span id="d13"><br></span><span id="p13"><br></span></button>
-  <button onclick="myFunction(14)"><span id="n14"></span><span id="d14"><br></span><span id="p14"><br></span></button>
-  <button onclick="myFunction(15)"><span id="n15"></span><span id="d15"><br></span><span id="p15"><br></span></button>
-  <button onclick="myFunction(16)"><span id="n16"></span><span id="d16"><br></span><span id="p16"><br></span></button>
-  <button onclick="myFunction(17)"><span id="n17"></span><span id="d17"><br></span><span id="p17"><br></span></button>
-  <button onclick="myFunction(18)"><span id="n18"></span><span id="d18"><br></span><span id="p18"><br></span></button>
-  <button onclick="myFunction(19)"><span id="n19"></span><span id="d19"><br></span><span id="p19"><br></span></button>
-  <button onclick="myFunction(20)"><span id="n20"></span><span id="d20"><br></span><span id="p20"><br></span></button>
-  <button onclick="myFunction(21)"><span id="n21"></span><span id="d21"><br></span><span id="p21"><br></span></button>
-  <button onclick="myFunction(22)"><span id="n22"></span><span id="d22"><br></span><span id="p22"><br></span></button>
-  <button onclick="myFunction(23)"><span id="n23"></span><span id="d23"><br></span><span id="p23"><br></span></button>
-  <button onclick="myFunction(24)"><span id="n24"></span><span id="d24"><br></span><span id=p"24"><br></span></button>
-  <button onclick="myFunction(25)"><span id="n25"></span><span id="d25"><br></span><span id="p25"><br></span></button>
+  <button onclick="myFunction(0)"><span id=n0></span><span id=d0><br></span><span id=p0><br></span></button>
+  <button onclick="myFunction(1)"><span id=n1></span><span id=d1><br></span><span id=p1><br></span></button>
+  <button onclick="myFunction(2)"><span id=n2></span><span id=d2><br></span><span id=p2><br></span></button>
+  <button onclick="myFunction(3)"><span id=n3></span><span id=d3><br></span><span id=p3><br></span></button>
+  <button onclick="myFunction(4)"><span id=n4></span><span id=d4><br></span><span id=p4><br></span></button>
+  <button onclick="myFunction(5)"><span id=n5></span><span id=d5><br></span><span id=p5><br></span></button>
+  <button onclick="myFunction(6)"><span id=n6></span><span id=d6><br></span><span id=p6><br></span></button>
+  <button onclick="myFunction(7)"><span id=n7></span><span id=d7><br></span><span id=p7><br></span></button>
+  <button onclick="myFunction(8)"><span id=n8></span><span id=d8><br></span><span id=p8><br></span></button>
+  <button onclick="myFunction(9)"><span id=n9></span><span id=d9><br></span><span id=p9><br></span></button>
+  <button onclick="myFunction(10)"><span id=n10></span><span id=d10><br></span><span id=p10><br></span></button>
+  <button onclick="myFunction(11)"><span id=n11></span><span id=d11><br></span><span id=p11><br></span></button>
+  <button onclick="myFunction(12)"><span id=n12></span><span id=d12><br></span><span id=p12><br></span></button>
+  <button onclick="myFunction(13)"><span id=n13></span><span id=d13><br></span><span id=p13><br></span></button>
+  <button onclick="myFunction(14)"><span id=n14></span><span id=d14><br></span><span id=p14><br></span></button>
+  <button onclick="myFunction(15)"><span id=n15></span><span id=d15><br></span><span id=p15><br></span></button>
+  <button onclick="myFunction(16)"><span id=n16></span><span id=d16><br></span><span id=p16><br></span></button>
+  <button onclick="myFunction(17)"><span id=n17></span><span id=d17><br></span><span id=p17><br></span></button>
+  <button onclick="myFunction(18)"><span id=n18></span><span id=d18><br></span><span id=p18><br></span></button>
+  <button onclick="myFunction(19)"><span id=n19></span><span id=d19><br></span><span id=p19><br></span></button>
+  <button onclick="myFunction(20)"><span id=n20></span><span id=d20><br></span><span id=p20><br></span></button>
+  <button onclick="myFunction(21)"><span id=n21></span><span id=d21><br></span><span id=p21><br></span></button>
+  <button onclick="myFunction(22)"><span id=n22></span><span id=d22><br></span><span id=p22><br></span></button>
+  <button onclick="myFunction(23)"><span id=n23></span><span id=d23><br></span><span id=p23><br></span></button>
+  <button onclick="myFunction(24)"><span id=n24></span><span id=d24><br></span><span id=p24><br></span></button>
+  <button onclick="myFunction(25)"><span id=n25></span><span id=d25><br></span><span id=p25><br></span></button>
 </div>
 
 <br> <br> <br> <br>
@@ -274,6 +282,22 @@
     <td contenteditable='true'>Quantity</td>
     <td>Item</td>
     <td contenteditable='true'>Price</td>
+  </tr>
+</table>
+
+<!-- Ordered items -->
+<table id="totals">
+  <tr>
+    <td contenteditable='true'>Subtotal</td>
+    <td id="subTxt" contenteditable='true'></td>
+  </tr>
+    <tr>
+    <td contenteditable='true'>Tax</td>
+    <td id="taxTxt" contenteditable='true'></td>
+  </tr>
+    <tr>
+    <td contenteditable='true'>Total</td>
+    <td id="totalTxt" contenteditable='true'></td>
   </tr>
 </table>
 
@@ -347,7 +371,16 @@
     this.price = price; 
   }
 
-  // Array of MenuItems 
+  // Prices
+  function Prices(){
+    this.subtotal = 0; 
+    this.tax = 0; 
+    this.total = 0; 
+  }
+
+
+  // Array of MenuItems and instance of price object
+  prices = new Prices();
   menuItems = new Array(
 	  new MenuItem("Meatballs", "Homemade meatballs topped with Parmigiano Reggiano, tomato sauce, and basil", 18),
     new MenuItem("Calamari", "Fried calamari served with homemade tomato dip", 18),
@@ -402,27 +435,42 @@
 
   // Update to order summary
   function myFunction(i) {
-    var table = document.getElementById("orderSummary");
-    var row, cell1, cell2, cell3; 
+    var itemTable = document.getElementById("orderSummary");
+    var totalTable = document.getElementById("totals");
+    var row, cell1, cell2, cell3;
 
+    // Update ordered items list and prices 
     if (itemQuantities[i] == 0) {
-      row = table.insertRow(-1); 
+      row = itemTable.insertRow(-1); 
       cell1 = row.insertCell(0);
       cell2 = row.insertCell(1);
       cell3 = row.insertCell(2);
-      rowNumbers[i] = table.rows.length - 1; 
+      rowNumbers[i] = itemTable.rows.length - 1; 
     } else {
       var rowNum = rowNumbers[i]; 
-      row = table.rows[rowNum];
+      row = itemTable.rows[rowNum];
       cell1 = row.cells[0];
       cell2 = row.cells[1];
       cell3 = row.cells[2];
     }
-
     itemQuantities[i]++;
     cell1.innerHTML = itemQuantities[i];
     cell2.innerHTML = menuItems[i].name;
     cell3.innerHTML = menuItems[i].price * itemQuantities[i];
+
+    // Update subtotal, tax, and total 
+    prices.subtotal += menuItems[i].price; 
+    var tax = prices.subtotal * 0.0625;
+    prices.tax = tax.toFixed(2); 
+    prices.total = parseFloat(prices.subtotal) + parseFloat(prices.tax); 
+
+    var subtotalCell = totalTable.rows[0].cells[1];
+    subtotalCell.innerHTML = prices.subtotal; 
+    var taxCell = totalTable.rows[1].cells[1];
+    taxCell.innerHTML = prices.tax; 
+    var totalCell = totalTable.rows[2].cells[1];
+    totalCell.innerHTML = prices.total; 
+   
   }
 
 
@@ -457,9 +505,7 @@
     alert("Your order has been placed! Your order will be ready at " + readyTime);
   }
 </script>
-<footer>
-<img src = "logo_transparent.png" width="15%" alt = "Logo" class = "logo">
-</footer>
+
 
 
 </body>
