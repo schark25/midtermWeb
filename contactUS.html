@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Paulo’s Pizza, Pasta, and Pasolina</title>
+	<script src="jquery-3.6.1.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		footer {
+			display: block;
+			margin: auto;
+			background-color: #8B0000;
+			bottom: 0;
+			width: 100%;
+		}
+		ol {
+			list-style: none;
+		}
+		.logo, #submitButton {
+			cursor: pointer;
+		}
+		.navBar {
+				background-color: #8B0000;
+				overflow: hidden;
+				width: 100%;
+		}
+		.navBar ol li {
+				list-style: none;
+   				position: relative;
+
+		}
+		.navBar a {
+			float: left;
+			display: block;
+  			color: #f2f2f2;
+  			text-align: center;
+  			padding: 14px 16px;
+  			text-decoration: none;
+  			font-size: 17px;
+		}.navBar a.active {
+			background-color: #FFFFFF;
+			color: #8B0000;
+		}
+		.navBar a:hover {
+			background-color: #FFFFFF;
+			color: #8B0000;
+			transition: .3s ease all
+		}
+		.navBar .icon {
+			display: none;
+		}
+		@media screen and (max-width: 900px) {
+			.navBar a {
+				display: none;
+			}
+			.navBar a.icon {
+				float: right;
+				display: block;
+			}
+		}
+		@media screen and (max-width: 900px) {
+			.navBar.responsive {
+				position: relative;
+			}
+			.navBar.responsive a.icon {
+				position: absolute;
+			}
+			.navBar.responsive  a {
+				float: none;
+				display: block;
+				text-align: left;
+			}
+		}
+		body {
+			text-align: center;
+			font-family: Georgia, "Times New Roman", Times, serif;
+			background-color: #F5DEB3;
+		}
+		label {
+			margin: 8px;
+		}
+		form {
+			max-width: 800px;
+			margin: auto;
+			background: #F5DEB3;
+			display: inline-block;
+			text-align: center;
+			padding: 20px;
+		}
+		textarea {
+			border: 2px solid #A0522D;
+			resize: none;
+			width: 500px;
+			max-width: 600px;
+			height: 150px;
+			display: block;
+			margin-left: auto;
+ 			margin-right: auto;
+		}
+		input, select {
+			border: 2px solid #A0522D;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+			width: 500px;
+			max-width: 600px;
+			box-sizing: border-box;
+		}
+		.label {
+			text-align: left;
+		}
+		#submitButton {
+			height: 40px;
+			width: 80px;
+			color: #A0522D;
+			background-color: #FFFFFF;
+			transition: .3s ease all;
+		}
+		#submitButton:hover {
+			color: #FFFFFF;
+			background-color: #A0522D;
+		}
+		.outsideLabel {
+			display: block;
+	 		max-width: 400px;
+			margin: auto;
+		}
+		@media (max-width: 650px) {
+			form {
+				max-width: 400px;
+			}
+			input, select {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 5px;
+				padding-right: 5px;
+				width: 400px;
+				max-width: 600px;
+				box-sizing: border-box;
+			}
+			textarea {
+				max-width: 400px;
+				height: 150px;
+				display: block;
+				margin-left: auto;
+ 				margin-right: auto;
+			}
+		}
+			@media (max-width: 450px) {
+				form {
+					max-width: 300px;
+				}
+				input, select {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 5px;
+					padding-right: 5px;
+					width: 300px;
+					max-width: 600px;
+					box-sizing: border-box;
+			}
+				textarea {
+					max-width: 300px;
+					height: 150px;
+					display: block;
+					margin-left: auto;
+ 					margin-right: auto;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<div class = "navBar" id="navBar">
+		<ol>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#home">Menu</a></li>
+			<li><a href="#home">Reservation</a></li>
+			<li><a href="#home">Order Online</a></li>
+			<li><a href="#home" class = "active">Contact Us</a></li>
+			<li><a href="#home">FAQ</a></li>
+			<li><a href="#home">Locations and Hours</a></li>
+			<li><a href="#placeholder" class="icon" onclick="openMenu()"><i class="fa fa-bars"></i></a></li>
+			</ol>
+	</div>
+	</header>
+	<br>
+	<h1>Contact</h1>
+	<br>
+	<div>
+		<div class = "outsideLabel">Is your request not time sensitive? Then please fill out the following form, and
+		we'll get back to you as soon as possible!</div>
+		<form id = "contactForm">
+			<label>
+				<div class = "label">Name - Required</div>
+				<input type="text" id = "name" name="name" placeholder="Name">
+			</label>
+			<br>
+			<label>
+				<div class = "label">Email - Required</div>
+				<input type="text" id = "email" name="email" placeholder="Email">
+				</label>
+			<br>
+			<label>
+				<div class = "label">Phone Number</div>
+				<input type="text" id = "phone" name="phone" placeholder="Phone Number">
+			</label>
+			<br>
+			<label>
+				<div class = "label">Inquiry Type - Required</div>
+				<select id = "inquiry" name = "inquiry">
+					<option value = "" disabled selected>What is your inquiry?</option>
+					<option value = "media"> Media inquiry </option>
+					<option value = "donations"> Donations inquiry </option>
+					<option value = "general"> General inquiry </option>
+					</select>
+			</label>
+			<br>
+			<label>
+				<div class = "label">Location</div>
+				<select id = "location" name = "location">
+					<option value = "" disabled selected>Location</option>
+					<option value = "location1"> Medford  </option>
+					<option value = "location2"> Boston </option>
+					<option value = "location3"> Somerville  </option>
+					<option value = "location3"> Wellesley  </option>
+				</select>
+			</label>
+			<br>
+			<label>
+				<div class = "label">Message - Required</div>
+			<textarea rows="5" cols="40" id = "message" placeholder="Your Message"></textarea>
+			</label>
+			<br>
+			<br>
+			<input type="button" id = "submitButton" value = "Submit">
+		</form>
+		<br>
+		<div class = "outsideLabel">
+			Have a question or concern? Feel free to email us at paulosresteraunt@gmail.com
+		<br>
+		Or call us at 617-924-8013.
+		</div>
+		<br>
+		<br>
+		<footer>
+		<img src = "logo_transparent.png" width="15%" alt = "Logo" class = "logo">
+		</footer>
+	</div>
+	<script>
+	function openMenu() {
+		var theNavBar = document.getElementById("navBar");
+		if (theNavBar.className == "navBar") {
+			theNavBar.className += " responsive";
+		} else {
+			theNavBar.className = "navBar";
+		}
+	}
+	function validate() {
+		var name = document.getElementById("name").value;
+		if (name == "") {
+			alert("Please enter your name");
+			return false;
+		}
+		var email = document.getElementById("email").value;
+		if (email == "") {
+			alert("Please enter your email");
+			return false;
+		}
+		var inquiry = document.getElementById("inquiry").value;
+		if (inquiry == "") {
+			alert("Please select an inquiry type");
+			return false;
+		}
+		var message = document.getElementById("message").value;
+		if (message == "") {
+			alert("Please input your message");
+			return false;
+		}
+		return true;
+	}
+		$(document).ready(function(){
+			$("#submitButton").click(function(){
+				if (validate()) {
+					alert("You form has sent recieved");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
