@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    background-image:linear-gradient(rgba(38,38,38,.7),rgba(38,38,38,.7)),url(locationsbg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.l-container{
+    font-family: "serif", georgia;
+}
+
+.hours-container-header, .l-container-header {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    color: #F5DEB3;
+}
+
+.l-container-header {
+    padding-top: 20px;
+    
+}
+
+.hours-container-content {
+    display: inline-block;
+    padding: 10px;
+    margin: 30px;
+    padding: 25x;
+    background-color: #A0522D
+}
+
+.mon-thurs {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #F5DEB3;
+}
+
+.fri-sun {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #F5DEB3;
+}
+
+.l-container-group2 {
+    display: inline-block;
+    background-color: #A0522D;
+    margin: 30px;
+    padding: 25x;
+}
+
+.location {
+    background-color: #F5DEB3;
+    padding-top: 0px;
+    padding: 40px;
+    margin: 10px;
+    
+}
