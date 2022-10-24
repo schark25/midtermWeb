@@ -212,7 +212,16 @@
 
 
 </script>
-
+ <script>
+		function openMenu() {
+		var theNavBar = document.getElementById("navBar");
+		if (theNavBar.className == "navBar") {
+			theNavBar.className += " responsive";
+		} else {
+			theNavBar.className = "navBar";
+		}
+	}
+	    </script>
 
 
 </body>
