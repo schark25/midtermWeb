@@ -1,0 +1,199 @@
+<!Doctype html>
+<html>
+<head>
+  <style>
+    body{
+      background-color: #F5DEB3;
+    }
+    * {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		footer {
+			display: block;
+			margin: auto;
+			background-color: #8B0000;
+			bottom: 0;
+			width: 100%;
+		}
+		ol {
+			list-style: none;
+		}
+		.logo, #submitButton {
+			cursor: pointer;
+		}
+		.navBar {
+				background-color: #8B0000;
+				overflow: hidden;
+				width: 100%;
+		}
+		.navBar ol li {
+				list-style: none;
+   				position: relative;
+		}
+		.navBar a {
+			float: left;
+			display: block;
+  			color: #f2f2f2;
+  			text-align: center;
+  			padding: 14px 16px;
+  			text-decoration: none;
+  			font-size: 17px;
+		}.navBar a.active {
+			background-color: #FFFFFF;
+			color: #8B0000;
+		}
+		.navBar a:hover {
+			background-color: #FFFFFF;
+			color: #8B0000;
+			transition: .3s ease all
+		}
+		.navBar .icon {
+			display: none;
+		}
+    ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
+
+    body {
+      background-color: #F5DEB3; 
+    }
+
+    #pageTitle {
+      background-color: #8B0000;
+      color: #b5a484;
+      padding: 40px;
+      text-align: center;
+      font-family: georgia; 
+      font-size: 43px; 
+    }
+  
+    table, td {
+      width: 60%; 
+      border: 1px solid #b5a484;
+      background-color:  #F5DEB3;
+      color: #8B0000;
+      margin: auto;
+      font-family: georgia; 
+    }
+
+    #q {
+      font-size: 30px;
+      font-weight: 700; 
+    }
+
+    #qTxt {
+      font-size: 23px; 
+      font-style: italic;
+      font-weight: 300; 
+    }
+
+
+
+  </style>
+</head>
+
+
+<body>
+  <!-- Top navigation bar -->
+  <header>
+    <div class = "navBar" id="navBar">
+      <ol>
+        <li><a href="#home" class = "active">Home</a></li>
+        <li><a href="#home">Menu</a></li>
+        <li><a href="#home">Reservation</a></li>
+        <li><a href="#home">Order Online</a></li>
+        <li><a href="#home">Contact Us</a></li>
+        <li><a href="#home">FAQ</a></li>
+        <li><a href="#home">Locations and Hours</a></li>
+        <li><a href="#placeholder" class="icon" onclick="openMenu()"><i class="fa fa-bars"></i></a></li>
+        </ol>
+    </div>
+	</header>
+
+
+<!-- Page Title -->
+<h1 id="pageTitle">FAQs</h1><br>
+<br> <br> 
+
+<!-- FAQ Table -->
+<table id="faqs">
+  <tr>
+    <td id="q" contenteditable='true'>How do I access nutrition information?</td>
+    <td id="qTxt" contenteditable='true'>If dining in our restaurant, please ask your server for nutrition information. If ordering online, please use our Contact Us page. </td>
+  </tr>
+  <tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+<tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+  <tr>
+    <td id="q" contenteditable='true'>Where do you deliver?</td>
+    <td id="qTxt" contenteditable='true'>We deliver to addresses within a 10 mile radius of any of our locations.</td>
+<tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+<tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+  </tr>
+    <tr>
+    <td id="q" contenteditable='true'>Does Paolo's cater?</td>
+    <td id="qTxt" contenteditable='true'>Yes! Please use our Contact Us page for catering requests.</td>
+  </tr>
+  <tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+<tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+  </tr>
+    <tr>
+    <td id="q" contenteditable='true'>Is Paolo's allergy-friendly?</td>
+    <td id="qTxt" contenteditable='true'>We take food allergies very seriously. Please let your server know about any allergies if you dine in-restaurant. If ordering, please use our Contact Us page to add a note to your order.</td>
+  </tr>
+<tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+<tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+<tr>
+    <td id="q" contenteditable='true'>Can I host a party at Paolo's?</td>
+    <td id="qTxt" contenteditable='true'>Yes! Please use our Contact Us page to notify us of a party request. We will be in touch to discuss event details. *Note: party requests must be submitted 2 weeks in advance of event date.*</td>
+</tr>
+<tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+<tr>
+    <td>
+        &nbsp;
+    </td>
+</tr>
+<tr>
+    <td id="q" contenteditable='true'>Is Paolo's hiring?</td>
+    <td id="qTxt" contenteditable='true'>For hiring inquiries, please do not use our Contact Us page. Please visit a Paolo's location. Our staff will be happy to give you job opening and hiring process information.</td>
+</tr>
+</table>
+</body>
+</html>
